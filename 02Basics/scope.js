@@ -9,3 +9,20 @@ if (true) {
 
 console.log(iAmLocal);
 console.log(iAmGlobal);
+
+//Kings problem
+
+//let king = 'John';
+
+if (true) {
+    //let king = 'Sam';
+
+    if (true) {
+        king = 'Nam';
+        console.log(king);
+    }
+}
+
+if (true) {
+    console.log('I am second part ' + king);
+}
