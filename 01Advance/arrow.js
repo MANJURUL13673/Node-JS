@@ -45,4 +45,17 @@ const todos = [{
 //const things = todos.keys((todo) => todo.isDone === false);
 const todosNotDone = (todos.filter((todo) => todo.isDone === false)).map((todo) => todo.title);
 
-console.log(todosNotDone);
+//console.log(todosNotDone);
+
+const cameras = {
+    price: 600,
+    weight: 2000,
+    myDes: () => {
+        return `This canon camera is of ${this.price}$`
+    }
+}
+
+console.log(cameras.myDes());
+
+//This is only for Redux people
+const func = () => ({key: 'value'});
