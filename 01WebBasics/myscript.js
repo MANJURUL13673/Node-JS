@@ -1,1 +1,1 @@
-//alert('File is attached')
+console.log(document.title);
