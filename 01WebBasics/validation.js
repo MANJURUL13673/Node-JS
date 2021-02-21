@@ -24,7 +24,7 @@ document.querySelector('.myform').addEventListener('submit', (event) => {
     document.querySelector('.myform').appendChild(myNewPara);
     if (event.target.password.value === event.target.repeatpassword.value) {
         myNewPara.textContent = "Password Matched"
-    }  else {
+    } else {
         myNewPara.textContent = "Password does not matched"
     }
 })
