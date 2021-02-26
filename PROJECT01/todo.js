@@ -11,7 +11,46 @@ var ul = document.getElementById('list');
 var li;
 
 function addItem() {
-    console.log('Add button clicked');
+    var input = document.getElementById('input');
+    var item = input.value;
+    var textnode;
+    if (item === '') {
+        textnode = document.createTextNode('input is empty!!!');
+        const controlsDiv = document.querySelector('.controls');
+        controlsDiv.insertBefore(textnode, controlsDiv.childNodes[4]);
+
+        setTimeout(() => {
+            controlsDiv.removeChild(controlsDiv.childNodes[4]);
+        }, 500)
+        
+    } else {
+        //create text node
+        textnode = document.createTextNode(item);
+        
+        //create li
+        li = document.createElement('li');
+
+        //create checkbox
+        var checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.setAttribute('id', 'check');
+
+        //create label
+        var label = document.createElement('label');
+
+        //add these element on web page
+        ul.appendChild(label);
+        li.appendChild(checkbox);
+        label.appendChild(textnode);
+        li.appendChild(label);
+        ul.insertBefore(li, ul.childNodes[0]);
+        
+        setTimeout(() => {
+            li.className = 'visual';
+        }, 2)
+
+        input.value = '';
+    }
 }
 
 function removeItem() {
