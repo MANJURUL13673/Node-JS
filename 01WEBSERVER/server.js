@@ -4,6 +4,7 @@ const hostname = '127.0.0.1';
 const port = 5000;
 
 http.createServer((req, res) => {
+    console.log('Check\n');
     res.writeHead(200, {'Content-Type' : 'text/plain'});
     res.end('Hello World!!!');
 }).listen(port, hostname, () => {
