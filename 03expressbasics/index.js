@@ -6,7 +6,8 @@ app.get('/',(req, res) => {
 });
 
 app.get('/about-us',(req, res) => {
-    res.send('<h1>I am about page<h1>');
+    //res.status(200).json({user: 'shyam', balance: '2000', id: '123ght56'});
+    res.status(500).json({error: 'something went wrong'});
 });
 
 app.get('/ab*cd',(req, res) => {
